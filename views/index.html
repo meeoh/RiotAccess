@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <script type="text/javascript" src="../public/scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../public/scripts/index.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+
+
+        <div class="section">
+
+            <div class="home-section" id="homesection">
+
+                <div class="home-content">
+                    <h1 class="main_title">RIOT ACCESS</h1>
+                    <br />
+                    <p class="main_desc">Simple interface to interact with the Riot Games API</p>
+                    <br />
+                    <a href="#championsection" class="btn btn-success btn-large" id="start_button">Get Started!</a>
+                </div>
+
+
+
+                <div class="home-background">
+                    <img class="home_bck" src="../public/images/test.jpg" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="header"  data-0="position: static;" data-150-top="top: 100px;position: fixed;" data-50-top="top: 0px;">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">RIOT ACCESS</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse">
+
+                        <ul class="nav navbar-nav navbar-right sections">
+                      	    <li><a href="#homesection">HOME</a></li>
+                            <li class="champ" ><a href="#championsection">CHAMPION</a></li> 
+                            <li><a href="#">GAME</a></li>                            
+                            <li><a href="#">LEAGUE</a></li>
+                            <li><a href="#">MATCH</a></li>
+                            <li><a href="#">MATCH HISTORY</a></li>
+                            <li><a href="#">STATS</a></li>
+                            <li><a href="#">SUMMONER</a></li>
+                            <li><a href="#">TEAM</a></li>                            
+                        </ul>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+
+            <div class="firstsection"  id="championsection">
+
+                <div class="firstcontent">     
+
+                    <div class="space" id="space"></div> 
+                    
+                    <ul class="champ_titles" >
+                    <a href="#space"><li class="btn btn-primary btn-large">All Champions</li></a>
+                    <a href="#space"><li class="btn btn-primary btn-large">Champion By ID</li></a>
+                    </ul>
+
+                    <div class="response_page all_champ_response" id="responsepage">
+                        <h1>Would you like to see only free to play champions?</h1>
+                        <button class="btn btn-primary btn-large yes ">Yes</button>
+                        <button class="btn btn-primary btn-large no ">No </button>
+                        <h4 class="yesnolabel"></h4>
+                        <br />
+                        <button class="btn btn-success btn-large run">Execute!</button>
+                        <div class="response_box">
+
+
+                        </div>
+
+
+
+                    </div>
+             
+
+                </div>
+
+                <div class="firstbackground">
+                    <img  class="first_bck"src="../public/images/bg.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="section">   
+            <div class="secondsection">
+
+                <div class="secondcontent">
+
+                </div>
+
+                <div class="secondbackground">
+                    <img class="second_bck" src="../public/images/vi.png" />
+                </div>
+
+
+            </div>   
+        </div>
+
+        <div class="section">
+        </div>
+    </div>
+
+    <script src="../public/scripts/skrollr.js"></script>
+    <script src="../public/scripts/skrollr.menu.js"></script>
+    <script src="../public/scripts/main.js"></script>
+</body>
+
+</html>
