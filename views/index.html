@@ -68,7 +68,7 @@
                             </li>
                             <li><a href="#gamesection">GAME</a>
                             </li>
-                            <li><a href="#">LEAGUE</a>
+                            <li><a href="#thirdsection">LEAGUE</a>
                             </li>
                             <li><a href="#">MATCH</a>
                             </li>
@@ -113,7 +113,7 @@
                         </ul>
                     </div>
 
-                    <div class="all_champ_response response">
+                    <div class="all_champ_response response invis">
 
                         <div class="response_page " id="responsepage">
 
@@ -134,7 +134,7 @@
 
 
 
-                    <div class="champ_by_id_response response">
+                    <div class="champ_by_id_response response invis">
 
                         <div class="response_page champ_id_response" id="responsepage">
 
@@ -184,7 +184,7 @@
                     </a>
 
 
-                    <div class="response_page game_response_page">
+                    <div class="response_page game_response_page invis">
                         <h1 class="game_number"></h1>
                         <button class="btn btn-primary btn-large prev_game">PREVIOUS GAME</button>
                         <button class="btn btn-primary btn-large next_game">NEXT GAME</button>
@@ -431,6 +431,73 @@
         </div>
 
         <div class="section">
+
+            <div class="thirdsection" id="thirdsection">
+
+                <div class="thirdcontent">
+
+                    <div class="options">
+                        <button>Ranked Teams By Summoner Name</button>
+                        <button>Ranked Teams By Team Name</button>
+                        <button>Challenger Teams</button>
+
+                    </div>
+
+                    <div class="response_page league_response_page">
+
+                        <h2>Choose a region</h2>
+                        <select class="dropdown_region">
+                            <option>NA</option>
+                            <option>EUW</option>
+                            <option>EUNE</option>
+                            <option>BR</option>
+                            <option>KR</option>
+                            <option>LAN</option>
+                            <option>LAS</option>
+                            <option>OCE</option>
+                            <option>RU</option>
+                            <option>TR</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="league_response_box">
+
+                        <h1 id="league_by_name_header">Enter summoner name</h1>
+
+                        <div class="input-group">
+                            <input type="text inputs" class="input_league_name form-control">
+                            <h4 class="game_label" id="game_label"></h4>
+                        </div>
+
+                        <a href="#league_by_name_header" class="league_name_run">
+                            <button class="btn btn-success btn-large league_name_run">Execute!</button>
+                        </a>
+
+                    </div>
+
+                    <div class="league_answer_box invis">
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="thirdbackground">
+                    <img class="third_bck" src="../public/images/urf.jpg" />
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
         </div>
 
 

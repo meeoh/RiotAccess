@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $('.home-content').hide();
     $('.home-content').fadeIn(2500);
-    $('.response, .game_response_page').hide();
+    $('.invis').hide();
     //$('.content_1, .content_2, .content_3, .content_4, .content_5, .content_6, .content_7, .content_8, .content_9').hide();
 
 
@@ -147,7 +147,7 @@ $(document).ready(function() {
 
     $('.game_run').on('click', function() {
 
-        
+
 
         var summ_name = $('.input_box_game').val();
         var riot_summ_name;
@@ -158,7 +158,7 @@ $(document).ready(function() {
             success = true;
             $('.input_box_game').removeClass('incorrect');
             $('.game_label').empty();
-            $('.game_response_page').fadeIn(1000);            
+            $('.game_response_page').fadeIn(1000);
 
 
             riot_summ_name = data[summ_name].name;
@@ -298,14 +298,17 @@ $(document).ready(function() {
 
 
             });
-        
+
 
 
         });
-    if (!success){        
-        $('.game_label').text("Please enter a valid summoner name");
-        $('.input_box_game').addClass('incorrect');
-    }
+        setTimeout(function() {
+            if (!success) {
+                $('.game_label').text("Please enter a valid summoner name");
+                $('.input_box_game').addClass('incorrect');
+                $('.game_response_page').fadeOut(1000);
+            }
+        }, 1000);
 
 
 
@@ -319,13 +322,13 @@ $(document).ready(function() {
 
     $('.next_game').on('click', function() {
 
-        
+
 
         $('.prev_game').removeAttr('disabled');
 
         if (currentSlide == 8) {
             $('.next_game').attr('disabled', 'disabled');
-            
+
         }
 
         $('.content_' + currentSlide).animate({
@@ -333,7 +336,7 @@ $(document).ready(function() {
         }, 250);
 
         currentSlide = currentSlide + 1;
-        $('.game_number').text("GAME: " + (currentSlide+1));
+        $('.game_number').text("GAME: " + (currentSlide + 1));
         $('.content_' + currentSlide).animate({
             left: '-0%'
         }, 250);
@@ -344,11 +347,11 @@ $(document).ready(function() {
 
     $('.prev_game').on("click", function() {
 
-        
+
 
         $('.next_game').removeAttr('disabled');
 
-        if (currentSlide == 1){
+        if (currentSlide == 1) {
             $('.prev_game').attr('disabled', 'disabled');
         }
 
@@ -357,11 +360,33 @@ $(document).ready(function() {
         }, 250);
 
 
-         currentSlide -= 1;
-         $('.game_number').text("GAME: " + (currentSlide+1));
-         $('.content_' + currentSlide).animate({
-             left: '0%'
-         }, 250);
+        currentSlide -= 1;
+        $('.game_number').text("GAME: " + (currentSlide + 1));
+        $('.content_' + currentSlide).animate({
+            left: '0%'
+        }, 250);
+    });
+
+    $('.league_name_run').on('click', function() {
+
+        $('.league_answer_box').fadeIn(1000);
+        var region = $('.dropdown_region').val().toLowerCase();
+        var user_name = $('.input_league_name').val().toLowerCase();
+        var id;
+
+        $.getJSON('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + user_name + '?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(data) {
+
+            id = data[user_name].id;
+
+
+
+            $.getJSON('https://na.api.pvp.net/api/lol/' + region + '/v2.5/league/by-summoner/' + id + '?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(data) {                        
+
+
+            });
+
+        });
+
     });
 
 
