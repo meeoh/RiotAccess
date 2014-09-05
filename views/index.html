@@ -38,9 +38,13 @@
                 </div>
 
             </div>
-        </div>
 
-        <div class="header" data-0="position: static;" data-150-top="top: 100px;position: fixed;" data-50-top="top: 0px;">
+
+
+
+
+        </div>
+        <div class="header" data-0="position: static;" data-150-top="top: 0;position: fixed;">
             <div class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
 
@@ -51,7 +55,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">RIOT ACCESS</a>
+                        <a class="navbar-brand" href="#homesection">RIOT ACCESS</a>
                     </div>
 
                     <div class="collapse navbar-collapse">
@@ -61,7 +65,7 @@
                             </li>
                             <li class="champ"><a href="#championsection">CHAMPION</a>
                             </li>
-                            <li><a href="#">GAME</a>
+                            <li><a href="#gamesection">GAME</a>
                             </li>
                             <li><a href="#">LEAGUE</a>
                             </li>
@@ -87,53 +91,63 @@
         </div>
 
 
+
+
         <div class="section">
 
-            <div class="firstsection" id="championsection">
+            <div class="firstsection" id="championsection" data-menu-offset="-58">
 
                 <div class="firstcontent">
 
-                    <div class="space" id="space"></div>
+                    <!--  <div class="space" id="space"></div> -->
 
-                    <ul class="champ_titles">
-                        <a href="#space">
-                            <li class="btn btn-primary btn-large all_champ_prompt">All Champions</li>
-                        </a>
-                        <a href="#space">
-                            <li class="btn btn-primary btn-large champ_id_prompt">Champion By Name</li>
-                        </a>
-                    </ul>
+                    <div class="champ_buttons" id="test">
+                        <ul class="champ_titles">
+                            <a href="#test">
+                                <li class="btn btn-primary btn-large all_champ_prompt">All Champions</li>
+                            </a>
+                            <a href="#test">
+                                <li class="btn btn-primary btn-large champ_id_prompt">Champion By Name</li>
+                            </a>
+                        </ul>
+                    </div>
 
-                    <div class="response_page all_champ_response" id="responsepage">
+                    <div class="all_champ_response response">
+
+                        <div class="response_page " id="responsepage">
 
 
 
-                        <h1>Would you like to see only free to play champions?</h1>
-                        <button class="btn btn-primary btn-large yes ">Yes</button>
-                        <button class="btn btn-primary btn-large no ">No</button>
-                        <h4 class="yesnolabel"></h4>
-                        <br />
-                        <button class="btn btn-success btn-large run">Execute!</button>
+                            <h1>Would you like to see only free to play champions?</h1>
+                            <button class="btn btn-primary btn-large yes ">Yes</button>
+                            <button class="btn btn-primary btn-large no ">No</button>
+                            <h4 class="yesnolabel"></h4>
+                            <br />
+                            <button class="btn btn-success btn-large run">Execute!</button>
+                        </div>
 
                         <div class="response_box">
                         </div>
 
                     </div>
 
-                    <div class="response_page champ_id_response" id="responsepage">
 
-                        <h1 class="summ_title">Enter A Champion Name</h1>
 
-                        <div class="input-group">
-                            <input type="text inputs" class="input_box form-control">
-                            <h4 class="champ_id_label"></h4>
+                    <div class="champ_by_id_response response">
+
+                        <div class="response_page champ_id_response" id="responsepage">
+
+                            <h1 class="summ_title">Enter A Champion Name</h1>
+
+                            <div class="input-group">
+                                <input type="text inputs" class="input_box form-control">
+                                <h4 class="champ_id_label"></h4>
+                            </div>
+
+
+
+                            <button class="btn btn-success btn-large champ_by_id_run">Execute!</button>
                         </div>
-
-
-
-                        <button class="btn btn-success btn-large champ_by_id_run">Execute!</button>
-
-
 
                         <div class="champ_id_response_box">
                         </div>
@@ -151,10 +165,49 @@
             </div>
         </div>
 
-        <div class="section">
-            <div class="secondsection">
 
-                <div class="secondcontent">
+        <div class="section">
+            <div class="secondsection" id="gamesection">
+
+                <div class="second_content">
+
+                    <h1 id="game_header">Which summoner do you want to find games for?</h1>
+
+                    <div class="input-group">
+                        <input type="text inputs" class="input_box_game form-control">
+                        <h4 id="game_label"></h4>
+                    </div>
+
+                    <a href="#game_label">
+                        <button class="btn btn-success btn-large game_run">Execute!</button>
+                    </a>
+
+
+                    <div class="response_page game_response_page">
+
+                        
+
+                        <div class="fellowplayers">
+                        <button class="btn btn-primary btn-large fellow_players_btn">Fellow Players</button>
+                        <div class="fellowplayers_content">
+                            
+                        </div>
+                        
+                        </div>
+
+                        <div class="stats">
+                         <button class="btn btn-primary btn-large">Stats</button>
+                         <div class="stats_content"></div>
+                        </div>
+
+                        <div class="general">             
+                         <button class="btn btn-primary btn-large">Misc</button>     
+                         <div class="general_content"></div>          
+                        </div>
+
+                    </div>
+
+
 
                 </div>
 
@@ -168,6 +221,8 @@
 
         <div class="section">
         </div>
+
+
     </div>
 
     <script src="../public/scripts/skrollr.js"></script>

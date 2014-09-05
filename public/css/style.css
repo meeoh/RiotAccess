@@ -15,10 +15,6 @@
 
 
 
-.home-content, .home-background {
-	position: absolute;
-}
-
 .main_title {
 	font-size: 60px;
 	letter-spacing: 10px;
@@ -46,7 +42,7 @@
 
 
 .home-content {
-	width: 100%;
+	width: 100%;	
 	z-index: 2;
 	color: white;
 	text-align: center;	
@@ -83,7 +79,7 @@
 
 .navbar {
 	background-color: rgba(0, 0, 0, 0.7);
-	height: 106px;
+	height: 55px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	width: 100%;
@@ -91,9 +87,6 @@
 	border: 0;
 }
 
-.navbar div {
-	padding-top: 10px;
-}
 
 .navbar-header {
 	padding-left: 20px;		
@@ -109,11 +102,12 @@
 
 
 
-
 .firstsection {	
 	width:100%;
 	height: 100%;		
+	position: relative;	
 }
+
 
 
 
@@ -123,24 +117,16 @@
 }
 
 .firstbackground img {	
-	height: 45%;
 	width: 100%;		
 }
 
-.firstcontent {
-	position: absolute;
+.firstcontent {	
 	width: 100%;
-	height: 100%;
-}
-
-
-.space {
-	
-	width: 10%;
-	top: 100px;
-	left: 50%;
+	height: 100%;	
+	margin-top: 10px;
 	position: absolute;
 }
+
 
 .firstcontent ul li {
 	display: inline;
@@ -148,8 +134,7 @@
 	margin-right: 100px;
 	margin-left: 100px;	
 	border-radius: 8px;	
-	color: white;	
-	position: relative;
+	color: white;		
 	border: 0;
 	background-color: rgba(76, 137, 202, .85)
 	}
@@ -158,32 +143,30 @@
 	text-decoration: none;
 }
 
+.champ_buttons {
+	text-align: center;
+}
 
 .champ_titles{
-	list-style: none;	
-	text-align: center;
-	margin-top: 165px;
+	list-style: none;			
 }
 
 .incorrect {
 	border: 2px solid red;
 }
 
-.response_page {
-	position: relative;
-	width: 70%;
-	height: 88%;
+
+
+.response_page {	
+	width: 50%;	
 	margin-left: auto;
-	margin-right: auto;
-	
-	background-color: rgba(255, 255, 255, .4);
+	margin-right: auto;	
+	background-color: rgba(255, 255, 255, .4);	
+	text-align: center;
+	font-family: Arial;	
+	margin-bottom: 0;
 }
 
-.all_champ_response {
-	text-align: center;
-	color: rgba(0,0,0,0.9);
-	font-family: Arial;	
-}
 
 .all_champ_response h1 {
 	font-weight: bold;
@@ -194,25 +177,154 @@
 	font-size: 20px;
 }
 
-.yesnolabel {
-	position: relative;
-	text-align: center;
-}
-
 .run {
 	margin-top: 20px;
 	font-size: 22px;
 	width: 200px;
+	margin-bottom: 20px;
 }
 
-.response_box {
+.response {
+	height: 80%;
 	width: 100%;
-	height: 68%;
-	
+	position: absolute;
+}
+
+.response_box {	
+	background-color: rgba(255, 255, 255, .4);	
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: scroll;
+	text-align: center;	
+	width: 50%;	
+	max-height: 60%;
+}
+
+.input-group{
+	width: 50%;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
-	overflow-y: scroll;
+	text-align: middle;
+}
+
+.summ_title {
 	text-align: center;
+	position: relative;
+	color: black;
+	font-weight: bold;
+}
+
+.champ_by_id_response {	
+	width: 100%;	
+
+}
+
+.champ_by_id_run {
+	font-size: 22px;
+	position: relative;
+	margin-top: 20px;
+}
+
+
+.champ_id_response_box {
+	background-color: rgba(255, 255, 255, .4);	
+	margin-left: auto;
+	margin-right: auto;	
+	text-align: center;
+	width: 50%;	
+	max-height: 50%;
+	position: absolute;
+	left: 25%;
+
+
+}
+
+.champ_id_response {
+	
+}
+
+.champ_id_label{
+	text-align: center;
+	color: black;
+	font-family: Arial;
+}
+
+
+
+.secondsection {
+	width: 100%;
+	height: 100%;	
+}
+
+
+
+.second_content {
+	width: 100%;
+	height: 100%;	
+	position: absolute;		
+	text-align: center;	
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	margin-top: 5%;
+}
+
+
+
+.game_run {
+	font-size: 20px;	
+	margin-top: 35px;
+}
+
+
+
+.secondbackground img {
+	width: 100%;
+	height: 100%;
+}
+
+#game_label {
+	text-decoration: none;
+}
+
+.game_response_page {
+	width: 100%;
+	background: none;
+	margin-top: 20px;
+}
+
+.fellowplayers{
+	position: absolute;
+	width: 33%;
+	height: 68%;
+	border: 5px solid white;
+	overflow-y: auto;	
+}
+
+.fellowplayers_content {
+	list-style: none;
+	text-align: left;
+}
+
+
+
+.stats {
+	position: absolute;
+	left: 33%;
+	width: 33%;
+	height: 68%;
+	border: 5px solid white;
+	overflow-y: auto;
+}
+
+.stats_content {	
+}
+
+.general {
+	position: absolute;
+	left: 66%;
+	width: 33%;
+	height: 68%;
+	border: 5px solid white;
+	overflow-y: scroll;
 }
