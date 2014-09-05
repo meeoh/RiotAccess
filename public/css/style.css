@@ -1,5 +1,8 @@
+
+
 .container-fluid {
 	padding: 0;
+	
 }
 
 @font-face {
@@ -57,13 +60,11 @@
 
 
 .home-background {
-	left: 0;
-	top: 0;
 	width: 100%;
 	height: 100%;		
 }
 
-.home_bck, .firstbck {
+.home_bck {
 	width: 100%;
 	height: 100%;		
 }
@@ -257,9 +258,9 @@
 	height: 100%;	
 }
 
+.second_content {	
+	
 
-
-.second_content {
 	width: 100%;
 	height: 100%;	
 	position: absolute;		
@@ -267,6 +268,7 @@
 	color: white;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 	margin-top: 5%;
+
 }
 
 
@@ -283,21 +285,26 @@
 	height: 100%;
 }
 
-#game_label {
+.game_run {
 	text-decoration: none;
+}
+
+#game_header {	
 }
 
 .game_response_page {
 	width: 100%;
+	height: 70%;
 	background: none;
 	margin-top: 20px;
+
 }
 
 .fellowplayers{
 	position: absolute;
 	width: 33%;
-	height: 68%;
-	border: 5px solid white;
+	height: 100%;
+	border: 2px solid white;
 	overflow-y: auto;	
 }
 
@@ -312,19 +319,43 @@
 	position: absolute;
 	left: 33%;
 	width: 33%;
-	height: 68%;
-	border: 5px solid white;
+	height: 100%;
+	border: 2px solid white;
 	overflow-y: auto;
 }
 
-.stats_content {	
-}
 
 .general {
 	position: absolute;
 	left: 66%;
 	width: 33%;
-	height: 68%;
-	border: 5px solid white;
-	overflow-y: scroll;
+	height: 100%;
+	border: 2px solid white;
+	overflow-y: auto;
+}
+
+.content_0{
+	width: 100%;
+	height: 80%;
+}
+
+.mycarousel {
+	width: 100%;
+	height: 100%;		
+}
+
+.content_0, .content_1, .content_2, .content_3, .content_4, .content_5, .content_6, .content_7, .content_8, .content_9 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.content_1, .content_2, .content_3, .content_4, .content_5, .content_6, .content_7, .content_8, .content_9 {	
+	left: 100%;
+}
+
+.out {	
+	position: relative;
+	overflow: hidden;
+	height: 100%;
 }
