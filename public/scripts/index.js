@@ -59,8 +59,7 @@ $(document).ready(function() {
             for (var hero in all_champs) {
                 if (userChamp == all_champs[hero].key.toLowerCase()) {
                     id = all_champs[hero].id;
-                    champ_name = all_champs[hero].name;
-                    console.log(id);
+                    champ_name = all_champs[hero].name;                    
                     break;
                 }
             }
@@ -166,8 +165,7 @@ $(document).ready(function() {
 
             $.getJSON('https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/' + summ_id + '/recent?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(res) {
 
-                for (i = 0; i < 10; ++i) {
-                    console.log(i);
+                for (i = 0; i < 10; ++i) {                    
 
                     //fellowPlayers Section
                     var playersList = "<ul>";
@@ -340,14 +338,11 @@ $(document).ready(function() {
         $('.content_' + currentSlide).animate({
             left: '-0%'
         }, 250);
-
-        console.log(currentSlide);
+        
 
     });
 
     $('.prev_game').on("click", function() {
-
-
 
         $('.next_game').removeAttr('disabled');
 
@@ -367,6 +362,9 @@ $(document).ready(function() {
         }, 250);
     });
 
+
+
+
     $('.league_name_run').on('click', function() {
 
         $('.league_answer_box').fadeIn(1000);
@@ -378,12 +376,13 @@ $(document).ready(function() {
 
             id = data[user_name].id;
 
+            $.getJSON('https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/105774?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(res) {
 
-
-            $.getJSON('https://na.api.pvp.net/api/lol/' + region + '/v2.5/league/by-summoner/' + id + '?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(data) {                        
-
+                //$('.league_answer_box').append("<h1>" + res[id][0].queue + "</h1>");
 
             });
+               
+          
 
         });
 
