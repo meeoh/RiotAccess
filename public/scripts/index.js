@@ -366,25 +366,53 @@ $(document).ready(function() {
 
 
     $('.league_name_run').on('click', function() {
+        $('.leagues_list').empty();
 
         $('.league_answer_box').fadeIn(1000);
+
         var region = $('.dropdown_region').val().toLowerCase();
         var user_name = $('.input_league_name').val().toLowerCase();
-        var id;
+        var id, buttons, content;
 
         $.getJSON('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + user_name + '?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(data) {
 
             id = data[user_name].id;
 
-            $.getJSON('https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/105774?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(res) {
+            $.getJSON('https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/' + id + '?api_key=2e4c2a5b-9c15-425f-80e3-7b54b2cf07d8', function(res) {
 
-                //$('.league_answer_box').append("<h1>" + res[id][0].queue + "</h1>");
+                for (i = 0; i < res[id].length; ++i){
+                var currentLeague = res[id][i],
+                    currentCount = 'league_' + i
+                    currentContent = currentCount + "_content";
+                    
+
+                buttons = "<li><button class=" + currentCount + " id=league_buttons>" + currentLeague.queue + "</button></li>";
+                $('.leagues_list').append(buttons);
+
+                content = "<div id=league_content class=" + currentContent + "><h1>League Name: " + currentLeague.name + "</h1>" +
+                "<h2>Participant Id: " + currentLeague.participantId + "</h2>" +
+                "<h2>Number Of Players In League: " + currentLeague.entries.length + "</h2>" +
+                "<h2>Tier: " + currentLeague.tier + "</h2></div>";
+
+                $('.league_response_content').append(content);
+
+            }
+               
 
             });
                
           
 
         });
+
+    });
+
+
+
+    $('.league_0').on('click', function() {
+
+          console.log('hi');
+
 
     });
 

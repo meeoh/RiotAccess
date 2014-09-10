@@ -421,18 +421,38 @@
 }
 
 .league_answer_box {
-	overflow: visible;
+	position: absolute;
+	left: 25%;
+	overflow-x: visible;
+	overflow-y: visible;
 }
 
 .leagues {
 	position: absolute;
-	left: -8%;
+	left: -20%;
+	top: 8%;
+	margin-left: 0;
+	height: 80%;
+	overflow-y: auto;
 }
 
-.leagues {
-	list-style: none;
-}
 
 .leagues li {
-	margin-bottom: 100%;
+	margin-bottom: 60%;
+	list-style: none;
+
+}
+
+.league_response_content {
+	
+	border: 5px solid black;
+	width: 100%;
+	height: 100%;	
+}
+
+#league_content {	
+	display: none;
+	position: absolute;
+	top: 0;
+	text-align: center;
 }
